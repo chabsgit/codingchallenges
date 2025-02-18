@@ -1,0 +1,2 @@
+This is sample text file
+That is simple text file in  folder

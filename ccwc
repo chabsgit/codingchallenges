@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+'''
+Word count cmd  - ccwc
+
+ccwc -l <fileName> : returns total lines
+ccwc -c <fileNAme> : number of bytes in file
+ccwc -w <fileNAme> : total words in file
+ccwc -m <fileNAme> : total multibytes in file
+ccwc <fileName> : equivalent to the -c, -l and -w options
+'''
+
+def validateOptionValue(option):
+    pass
+
+def checkIfFileExists(fileName):
+    pass
+        
+
+
+def readTotalLinesCount(fileName):
+    f = open(fileName, "r")
+    totalLines = f.readlines()
+    f.close()
+    return len(totalLines)
+
+def readTotalBytes(fileName):
+    pass
+
+def readTotalWords(fileName):
+    f = open(fileName, "r")
+    totalLines = f.readlines()
+    totalsWords = 0
+    for line in totalLines:
+        totalWordsInLine =line.split()
+        totalsWords += len(totalWordsInLine)
+    f.close()
+    return totalsWords
+
+import sys
+
+#option = sys.argv[1]
+fileName="/workspaces/LearnPython/CC/CC_LiveApplications/CustomLinuxCmd/TextFile.txt"
+
+print(readTotalLinesCount(fileName))
+print(readTotalWords(fileName))
+
